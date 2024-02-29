@@ -21,6 +21,7 @@ Future<List<Location>> locationFromAddress(
 }) =>
     GeocodingPlatform.instance!.locationFromAddress(
       address,
+      localeIdentifier: localeIdentifier,
     );
 
 /// Returns a list of [Placemark] instances found for the supplied
@@ -43,6 +44,7 @@ Future<List<Placemark>> placemarkFromCoordinates(
     GeocodingPlatform.instance!.placemarkFromCoordinates(
       latitude,
       longitude,
+      localeIdentifier: localeIdentifier,
     );
 
 /// Returns a list of [Location] instances found for the supplied address.
